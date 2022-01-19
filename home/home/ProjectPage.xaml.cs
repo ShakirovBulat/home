@@ -10,15 +10,15 @@ using Xamarin.Forms.Xaml;
 namespace home
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RegistrationPage : ContentPage
+    public partial class ProjectPage : ContentPage
     {
-        public RegistrationPage()
+        public ProjectPage()
         {
             InitializeComponent();
         }
-        async void GoToMainPageButtonClicked(object sender, EventArgs e)
+        async void OpenProject(object sender, EventArgs e)
         {
-            await App.GlobalNavigation.PushModalAsync(new MainPage(), true);
+            await App.GlobalNavigation.PushAsync(new Project1(), true);
         }
     }
 }

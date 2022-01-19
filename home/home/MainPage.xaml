@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="home.MainPage">
+             x:Class="home.MainPage"
+             NavigationPage.HasNavigationBar="False">
     
 
     <StackLayout BackgroundColor="Black">
         <Frame BackgroundColor="Black">
             <Image Source="NameApp.png" WidthRequest="350" HeightRequest="350"/>
         </Frame>
-        <Label Text="Логин" HorizontalOptions="Center" FontSize="Large"/>
+        <Label TextColor="White" Text="Логин" HorizontalOptions="Center" FontSize="Large"/>
         <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" />
-        <Label Text="Пароль" HorizontalOptions="Center" FontSize="Large"/>
-        <Entry BackgroundColor="AliceBlue" Margin="50, 20, 50, 10" />
+        <Label TextColor="White" Text="Пароль" HorizontalOptions="Center" FontSize="Large"/>
+        <Entry IsPassword="True" BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" />
         <StackLayout Orientation="Horizontal" Spacing="50">
-            <Button Clicked="GoToSecondPageButtonClicked" Text="Зарегистрироваться" Margin="40, 0, 0, 0" BorderColor="#000000" CornerRadius="50" ></Button>
-            <Button Text="Войти"  Margin="0, 0, 30, 0" HeightRequest="50" CornerRadius="50" BorderColor="#020202"></Button>
+            <Button Clicked="GoToRegPageButtonClicked" Text="Зарегистрироваться" Margin="40, 0, 0, 0" BorderColor="#000000" CornerRadius="50" ></Button>
+            <Button Clicked="OpenProjectsPageButtonClicked" Text="Войти"  Margin="0, 0, 30, 0" HeightRequest="50" CornerRadius="50" BorderColor="#020202"></Button>
         </StackLayout>
     </StackLayout>
 

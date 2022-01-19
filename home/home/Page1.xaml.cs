@@ -10,15 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace home
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RegistrationPage : ContentPage
+    public partial class Page1 : ContentPage
     {
-        public RegistrationPage()
+        public Page1()
         {
             InitializeComponent();
-        }
-        async void GoToMainPageButtonClicked(object sender, EventArgs e)
-        {
-            await App.GlobalNavigation.PushModalAsync(new MainPage(), true);
         }
     }
 }

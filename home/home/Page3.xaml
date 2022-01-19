@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="home.Page3"
+             Title="Контакты">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Телефон" Margin="50, 30, 0, 0" FontSize="Medium"/>
+            <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" IsEnabled="False" />
+            <Label Text="Телефон" Margin="50, 30, 0, 0" FontSize="Medium"/>
+            <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" IsEnabled="False" />
+            <Label Text="E-mail" Margin="50, 30, 0, 0" FontSize="Medium"/>
+            <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" IsEnabled="False" />
+            <Label Text="Адрес" Margin="50, 30, 0, 0" FontSize="Medium"/>
+            <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" IsEnabled="False" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,12 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="home.RegistrationPage">
+             x:Class="home.RegistrationPage"
+             NavigationPage.HasNavigationBar="True">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label HorizontalOptions="Center" TextColor="White" Text="Регистрация" FontSize="Large" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="E-mail" Margin="50, 30, 0, 0" FontSize="Medium"/>
+            <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" />
+            <Label Text="Логин" Margin="50, 30, 0, 0" FontSize="Medium"/>
+            <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" />
+            <Label Text="Пароль" Margin="50, 30, 0, 0" FontSize="Medium"/>
+            <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" />
+            <Label Text="Пароль" Margin="50, 30, 0, 0" FontSize="Medium"/>
+            <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" />
+            <Button Clicked="GoToMainPageButtonClicked" Text="Зарегистрироваться" Margin="50, 20, 50, 0" BorderColor="#000000" ></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

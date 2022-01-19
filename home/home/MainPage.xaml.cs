@@ -14,9 +14,13 @@ namespace home
         {
             InitializeComponent();
         }
-        async void GoToSecondPageButtonClicked(object sender, EventArgs e)
+        async void GoToRegPageButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new RegistrationPage(), true);
+            await Navigation.PushAsync(new RegistrationPage(), true);
+        }
+        async void OpenProjectsPageButtonClicked(object sender, EventArgs e)
+        {
+            await App.GlobalNavigation.PushAsync(new ProjectPage(), true);
         }
     }
 }
