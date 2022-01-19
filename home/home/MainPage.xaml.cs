@@ -14,5 +14,9 @@ namespace home
         {
             InitializeComponent();
         }
+        async void GoToSecondPageButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new RegistrationPage(), true);
+        }
     }
 }
