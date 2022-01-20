@@ -11,7 +11,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Button Clicked="OpenProject" Text="Проект 1" Margin="10,0,0,0" BorderColor="#000000" ></Button>
+                <Button Clicked="OpenProject" Text="Проект 1" Margin="0,5,0,0" BorderColor="#000000" ></Button>
                 <Button Text="Проект 2" BorderColor="#000000" ></Button>
                 <Button Text="Проект 3" BorderColor="#000000" ></Button>
                 <Button Text="Проект 4" BorderColor="#000000" ></Button>
