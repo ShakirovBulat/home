@@ -9,7 +9,6 @@ using Xamarin.Forms.Xaml;
 
 namespace home
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProjectPage : ContentPage
     {
         public ProjectPage()

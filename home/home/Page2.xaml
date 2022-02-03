@@ -5,15 +5,17 @@
              Title="Картинки">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal" Spacing="50">
-                <Image Source="ghoul.jpg" WidthRequest="100" HeightRequest="100"/>
-                <Image Source="ghoul.jpg" WidthRequest="100" HeightRequest="100"/>
-                <Image Source="ghoul.jpg" WidthRequest="100" HeightRequest="100"/>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="House.png" Margin="10,10"/>
+                <Image Source="House.png" Margin="0,10"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" Spacing="50">
-                <Image Source="ghoul.jpg" WidthRequest="100" HeightRequest="100"/>
-                <Image Source="ghoul.jpg" WidthRequest="100" HeightRequest="100"/>
-                <Image Source="ghoul.jpg" WidthRequest="100" HeightRequest="100"/>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="House.png" Margin="10,10"/>
+                <Image Source="House.png" Margin="0,10"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="House.png" Margin="10,10"/>
+                <Image Source="House.png" Margin="0,10"/>
             </StackLayout>
         </StackLayout>
         
