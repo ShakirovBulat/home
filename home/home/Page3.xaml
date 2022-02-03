@@ -2,17 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="home.Page3"
-             Title="Контакты">
+             Title="Контакты"
+             Visual="Material">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Телефон" Margin="50, 30, 0, 0" FontSize="Medium"/>
-            <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" IsEnabled="False" />
-            <Label Text="Телефон" Margin="50, 30, 0, 0" FontSize="Medium"/>
-            <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" IsEnabled="False" />
-            <Label Text="E-mail" Margin="50, 30, 0, 0" FontSize="Medium"/>
-            <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" IsEnabled="False" />
-            <Label Text="Адрес" Margin="50, 30, 0, 0" FontSize="Medium"/>
-            <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" IsEnabled="False" />
+            <Frame BorderColor="Black" Margin="30,20">
+                <Entry Placeholder="Phone" IsEnabled="False" Margin="-15,-15"/>
+            </Frame>
+            <Frame BorderColor="Black" Margin="30,20">
+                <Entry Placeholder="Phone" IsEnabled="False" Margin="-15,-15"/>
+            </Frame>
+            <Frame BorderColor="Black" Margin="30,20">
+                <Entry Placeholder="E-mail" IsEnabled="False" Margin="-15,-15"/>
+            </Frame>
+            <Frame BorderColor="Black" Margin="30,20">
+                <Entry Placeholder="Adress" IsEnabled="False" Margin="-15,-15"/>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
