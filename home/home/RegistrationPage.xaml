@@ -15,13 +15,13 @@
                 <Entry Placeholder="E-mail" Margin="-15,-15"/>
             </Frame>
             <Frame BorderColor="Black" Margin="30,20">
-                <Entry Placeholder="Login" Margin="-15,-15"/>
+                <Entry Placeholder="Логин" Margin="-15,-15"/>
             </Frame>
             <Frame BorderColor="Black" Margin="30,20">
-                <Entry Placeholder="Password" Margin="-15,-15"/>
+                <Entry Placeholder="Пароль" Margin="-15,-15"/>
             </Frame>
             <Frame BorderColor="Black" Margin="30,20">
-                <Entry Placeholder="Password" Margin="-15,-15"/>
+                <Entry Placeholder="Пароль" Margin="-15,-15"/>
              </Frame>
              <Button Clicked="GoToMainPageButtonClicked" Text="Зарегистрироваться" CornerRadius="50" Margin="50, 40, 50, 0" BackgroundColor="#00B2FF" BorderColor="Blue" ></Button>
         </StackLayout>

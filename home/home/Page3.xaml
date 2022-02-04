@@ -7,16 +7,16 @@
     <ContentPage.Content>
         <StackLayout>
             <Frame BorderColor="Black" Margin="30,20">
-                <Entry Placeholder="Phone" IsEnabled="False" Margin="-15,-15"/>
+                <Entry Placeholder="Телефон" IsEnabled="False" Margin="-15,-15"/>
             </Frame>
             <Frame BorderColor="Black" Margin="30,20">
-                <Entry Placeholder="Phone" IsEnabled="False" Margin="-15,-15"/>
+                <Entry Placeholder="Телефон" IsEnabled="False" Margin="-15,-15"/>
             </Frame>
             <Frame BorderColor="Black" Margin="30,20">
                 <Entry Placeholder="E-mail" IsEnabled="False" Margin="-15,-15"/>
             </Frame>
             <Frame BorderColor="Black" Margin="30,20">
-                <Entry Placeholder="Adress" IsEnabled="False" Margin="-15,-15"/>
+                <Entry Placeholder="Адресс" IsEnabled="False" Margin="-15,-15"/>
             </Frame>
         </StackLayout>
     </ContentPage.Content>
