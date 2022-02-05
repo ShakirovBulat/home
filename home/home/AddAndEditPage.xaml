@@ -21,7 +21,7 @@
             <Entry BackgroundColor="LightGray" Placeholder="Телефон №2"/>
             <Entry BackgroundColor="LightGray" Placeholder="Email"/>
             <Entry BackgroundColor="LightGray" Placeholder="Адрес"/>
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Spacing="30" Orientation="Horizontal">
                 <Button
                     x:Name="CancelBTN"
                     CornerRadius="30"
@@ -32,7 +32,7 @@
                     Text="Отмена"
                     />
                 <Button
-                    x:Name="CancelBTN"
+                    x:Name="AddBTN"
                     CornerRadius="30"
                     WidthRequest="150"
                     HeightRequest="50"

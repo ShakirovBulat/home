@@ -16,9 +16,11 @@ namespace home
         {
             InitializeComponent();
         }
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            DisplayAlert("Alert", "Tapped", "OK");
+            await App.GlobalNavigation.PushAsync(new AddAndEditPage(), true);
+
         }
+        //DisplayAlert("Alert", "Tapped", "OK");
     }
 }

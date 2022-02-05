@@ -7,10 +7,10 @@
     <ContentPage.Content>
         <StackLayout>
             <Frame BorderColor="Black" Margin="30,20">
-                <Entry Placeholder="Телефон" IsEnabled="False" Margin="-15,-15"/>
+                <Entry Placeholder="Телефон №1" IsEnabled="False" Margin="-15,-15"/>
             </Frame>
             <Frame BorderColor="Black" Margin="30,20">
-                <Entry Placeholder="Телефон" IsEnabled="False" Margin="-15,-15"/>
+                <Entry Placeholder="Телефон №2" IsEnabled="False" Margin="-15,-15"/>
             </Frame>
             <Frame BorderColor="Black" Margin="30,20">
                 <Entry Placeholder="E-mail" IsEnabled="False" Margin="-15,-15"/>
