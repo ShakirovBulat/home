@@ -19,7 +19,6 @@ namespace home
         async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             await App.GlobalNavigation.PushAsync(new AddAndEditPage(), true);
-
         }
         //DisplayAlert("Alert", "Tapped", "OK");
     }
