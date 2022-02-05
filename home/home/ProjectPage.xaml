@@ -4,7 +4,7 @@
              x:Class="home.ProjectPage"
              NavigationPage.HasBackButton="False">
     <NavigationPage.TitleView>
-        <StackLayout Margin="0,0,60,0" Orientation="Horizontal">
+        <StackLayout Margin="0,0,30,0" Orientation="Horizontal">
             <Label 
                 HorizontalOptions="CenterAndExpand" 
                 TextColor="White" 
@@ -16,10 +16,11 @@
                 FontFamily="MaterialIconsFont" 
                 TextColor="White" 
                 Text="&#xe145;" 
-                FontSize="Title"/>
-            <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-            </Label.GestureRecognizers>
+                FontSize="Title">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </NavigationPage.TitleView>
     

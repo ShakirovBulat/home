@@ -4,9 +4,24 @@
              xmlns:local="clr-namespace:home;assembly=home"
              x:Class="home.Project1">
     <NavigationPage.TitleView>
-        <StackLayout>
-            <Label HorizontalOptions="CenterAndExpand" TextColor="White" Text="Проект 1" FontSize="Large" Margin="0,0,65,0"/>
-
+        <StackLayout Orientation="Horizontal" >
+            <Label 
+                HorizontalOptions="CenterAndExpand" 
+                TextColor="White" 
+                Text="Проект 1" 
+                FontSize="Large" 
+                Margin="0,0,45,0"/>
+            <Label 
+                HorizontalOptions="End" 
+                FontFamily="MaterialIconsFont" 
+                TextColor="White" 
+                Text="&#xe3c9;" 
+                FontSize="Title"
+                Margin="0,0,20,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </NavigationPage.TitleView>
     <TabbedPage.Children>

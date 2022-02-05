@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace home
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProjectPage : ContentPage
     {
         public ProjectPage()
@@ -18,6 +19,7 @@ namespace home
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             DisplayAlert("Alert", "Tapped", "OK");
+            await GlobalNavigation.PushAsync(new AddAndEditPage(), true);
         }
         async void OpenProject(object sender, EventArgs e)
         {

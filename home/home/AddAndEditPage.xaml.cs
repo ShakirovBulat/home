@@ -10,15 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace home
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Project1 : TabbedPage
+    public partial class AddAndEditPage : ContentPage
     {
-        public Project1()
+        public AddAndEditPage()
         {
             InitializeComponent();
-        }
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-            DisplayAlert("Alert", "Tapped", "OK");
         }
     }
 }
