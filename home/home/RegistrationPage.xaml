@@ -6,7 +6,7 @@
              Visual="Material">
     <NavigationPage.TitleView>
         <StackLayout>
-            <Label HorizontalOptions="CenterAndExpand" TextColor="White" Text="Регистрация" FontSize="Large"/>
+            <Label HorizontalOptions="CenterAndExpand" TextColor="White" Text="Регистрация" FontSize="Title" Margin="0,0,65,0"/>
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>

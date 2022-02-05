@@ -5,7 +5,8 @@
              x:Class="home.Project1">
     <NavigationPage.TitleView>
         <StackLayout>
-            <Label HorizontalOptions="Center" TextColor="White" Text="Проект 1" FontSize="Large" HorizontalTextAlignment="Center" />
+            <Label HorizontalOptions="CenterAndExpand" TextColor="White" Text="Проект 1" FontSize="Large" Margin="0,0,65,0"/>
+
         </StackLayout>
     </NavigationPage.TitleView>
     <TabbedPage.Children>

@@ -15,6 +15,10 @@ namespace home
         {
             InitializeComponent();
         }
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            DisplayAlert("Alert", "Tapped", "OK");
+        }
         async void OpenProject(object sender, EventArgs e)
         {
             await App.GlobalNavigation.PushAsync(new Project1(), true);
