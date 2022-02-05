@@ -17,6 +17,10 @@ namespace home
             InitializeComponent();
         }
 
-        AddBTN
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            DisplayAlert("Alert", "Tapped", "Отмена", "Удалить");
+        }
+        //DisplayAlert("Alert", "Tapped", "OK");
     }
 }
