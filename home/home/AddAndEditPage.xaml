@@ -4,20 +4,19 @@
              x:Class="home.AddAndEditPage"
              Visual="Material">
     <NavigationPage.TitleView>
-        <StackLayout>
+        <StackLayout Margin="0,0,30,0" Orientation="Horizontal">
             <Label
                 FontSize="21"
                 HorizontalOptions="CenterAndExpand"
                 Text="Создать проект"
                 TextColor="White"
                 TextTransform="None"
-                VerticalOptions="CenterAndExpand"
-                Padding="70,0"/>
+                VerticalOptions="CenterAndExpand"/>
             <Label 
                     HorizontalOptions="End" 
                     FontFamily="MaterialIconsFont" 
                     TextColor="White" 
-                    Text="&#xe145;" 
+                    Text="&#xe872;" 
                     FontSize="Title">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"  />

@@ -19,7 +19,7 @@ namespace home
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            DisplayAlert("Alert", "Tapped", "Отмена", "Удалить");
+            DisplayAlert("", "вы точно хотите удалить?", "Удалить", "Отменить");
         }
         //DisplayAlert("Alert", "Tapped", "OK");
     }
