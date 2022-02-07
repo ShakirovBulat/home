@@ -10,8 +10,8 @@
         <Frame BackgroundColor="Black">
             <Image Source="NameApp.png" WidthRequest="350" HeightRequest="350"/>
         </Frame>
-        
-        <Entry Placeholder="Login" BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" />
+        <Label TextColor="White" Text="Логин" HorizontalOptions="Center" FontSize="Large"/>
+        <Entry BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" />
         <Label TextColor="White" Text="Пароль" HorizontalOptions="Center" FontSize="Large"/>
         <Entry IsPassword="True" BackgroundColor="AliceBlue" Margin="50, 0, 50, 10" />
         <StackLayout Orientation="Horizontal" Spacing="50">
