@@ -29,7 +29,7 @@
             <Entry BackgroundColor="LightGray" Placeholder="Имя проекта"/>
             <Editor BackgroundColor="LightGray" Placeholder="Описание" AutoSize="TextChanges"/>
             <Entry BackgroundColor="LightGray" Placeholder="Телефон №1"/>
-            <Entry BackgroundColor="LightGray" Placeholder="Телефон №2"/>
+            <!--<Entry BackgroundColor="LightGray" Placeholder="Телефон №2"/>-->
             <Entry BackgroundColor="LightGray" Placeholder="Email"/>
             <Entry BackgroundColor="LightGray" Placeholder="Адрес"/>
             <StackLayout Spacing="30" Orientation="Horizontal">
