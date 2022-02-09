@@ -9,7 +9,7 @@ namespace home
 {
     public partial class App : Application
     {
-        public const string DB_NAME = "Aplus.mdf";
+        public const string DB_NAME = "Project.db";
         public static CRUDOperation db;
         public static INavigation GlobalNavigation { get; private set; }
         public static INavigation GlobalNavigation2 { get; private set; }

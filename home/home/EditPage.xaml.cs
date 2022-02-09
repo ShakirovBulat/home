@@ -10,13 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace home
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AddAndEditPage : ContentPage
+    public partial class EditPage : ContentPage
     {
-        public AddAndEditPage()
+        public EditPage()
         {
             InitializeComponent();
         }
-
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             DisplayAlert("", "вы точно хотите удалить?", "Удалить", "Отменить");

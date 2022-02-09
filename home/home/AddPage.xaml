@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="home.AddAndEditPage"
+             Visual="Material">
+    <NavigationPage.TitleView>
+        <StackLayout Margin="0,0,30,0" Orientation="Horizontal">
+            <Label
+                FontSize="21"
+                HorizontalOptions="CenterAndExpand"
+                Text="Создать проект"
+                TextColor="White"
+                TextTransform="None"
+                VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout Spacing="30" Margin="20,15">
+            <Entry BackgroundColor="LightGray" Placeholder="Имя проекта"/>
+            <Editor BackgroundColor="LightGray" Placeholder="Описание" AutoSize="TextChanges"/>
+            <Entry BackgroundColor="LightGray" Placeholder="Телефон №1"/>
+            <!--<Entry BackgroundColor="LightGray" Placeholder="Телефон №2"/>-->
+            <Entry BackgroundColor="LightGray" Placeholder="Email"/>
+            <Entry BackgroundColor="LightGray" Placeholder="Адрес"/>
+            <StackLayout Spacing="30" Orientation="Horizontal">
+                <Button
+                    x:Name="CancelBTN"
+                    CornerRadius="30"
+                    WidthRequest="150"
+                    HeightRequest="50"
+                    BackgroundColor="DeepSkyBlue"
+                    HorizontalOptions="Start"
+                    Text="Отмена"
+                    />
+                <Button
+                    x:Name="AddBTN"
+                    CornerRadius="30"
+                    WidthRequest="150"
+                    HeightRequest="50"
+                    BackgroundColor="DeepSkyBlue"
+                    HorizontalOptions="Start"
+                    Text="Добавить"
+                    />
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace home.db
 {
-    [Table("Project")]
+    [Table("Project1")]
     public class ProjectModel
     {
         [PrimaryKey, AutoIncrement]
