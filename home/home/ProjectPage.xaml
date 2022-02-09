@@ -23,11 +23,29 @@
             </Label>
         </StackLayout>
     </NavigationPage.TitleView>
-    
+    <!--<Button Text="Добавить" Clicked="CreateFriend" />-->
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <ListView x:Name="friendsList" ItemsSource="{Binding}" ItemSelected="OnItemSelected">
+                <Button Clicked="OpenProject" Text="Проект 1" Margin="0,5,0,0" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 2" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 3" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 4" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 5" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 6" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 7" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 8" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 9" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 10" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 11" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 12" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 13" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 14" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 15" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 16" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 17" BorderColor="#000000" ></Button>
+                    <Button Text="Проект 18" BorderColor="#000000" ></Button>
+                    <!--<ListView x:Name="friendsList" ItemsSource="{Binding}" ItemSelected="OnItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -39,8 +57,8 @@
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                </ListView>
-                <Button Text="Добавить" Clicked="CreateFriend" />
+                </ListView>-->
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

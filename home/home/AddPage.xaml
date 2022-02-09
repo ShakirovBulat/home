@@ -29,7 +29,9 @@
                 Text="{Binding PhoneNum}"
                 BackgroundColor="LightGray" 
                 Placeholder="Телефон №1"/>
-            <!--<Entry BackgroundColor="LightGray" Placeholder="Телефон №2"/>-->
+            <!--<Entry 
+            BackgroundColor="LightGray" 
+            Placeholder="Телефон №2"/>-->
             <Entry 
                 Text="{Binding Email}"
                 BackgroundColor="LightGray" 
