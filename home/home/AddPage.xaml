@@ -16,12 +16,28 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout Spacing="30" Margin="20,15">
-            <Entry BackgroundColor="LightGray" Placeholder="Имя проекта"/>
-            <Editor BackgroundColor="LightGray" Placeholder="Описание" AutoSize="TextChanges"/>
-            <Entry BackgroundColor="LightGray" Placeholder="Телефон №1"/>
+            <Entry 
+                Text="{Binding Name}"
+                BackgroundColor="LightGray" 
+                Placeholder="Имя проекта"/>
+            <Editor 
+                Text="{Binding Description}"
+                BackgroundColor="LightGray" 
+                Placeholder="Описание" 
+                AutoSize="TextChanges"/>
+            <Entry 
+                Text="{Binding PhoneNum}"
+                BackgroundColor="LightGray" 
+                Placeholder="Телефон №1"/>
             <!--<Entry BackgroundColor="LightGray" Placeholder="Телефон №2"/>-->
-            <Entry BackgroundColor="LightGray" Placeholder="Email"/>
-            <Entry BackgroundColor="LightGray" Placeholder="Адрес"/>
+            <Entry 
+                Text="{Binding Email}"
+                BackgroundColor="LightGray" 
+                Placeholder="Email"/>
+            <Entry 
+                Text="{Binding Adress}"
+                BackgroundColor="LightGray" 
+                Placeholder="Адрес"/>
             <StackLayout Spacing="30" Orientation="Horizontal">
                 <Button
                     x:Name="CancelBTN"
@@ -33,6 +49,7 @@
                     Text="Отмена"
                     />
                 <Button
+                    Clicked="Save"
                     x:Name="AddBTN"
                     CornerRadius="30"
                     WidthRequest="150"

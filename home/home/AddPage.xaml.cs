@@ -1,4 +1,5 @@
-﻿using System;
+﻿using home.db;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,15 @@ namespace home
         public AddAndEditPage()
         {
             InitializeComponent();
+        }
+        private async void Save(object sender, EventArgs e)
+        {
+            var project = (ProjectModel)BindingContext;
+            if (!String.IsNullOrEmpty(project.Name))
+            {
+                App.db.SaveItem(project);
+            }
+            await this.Navigation.PopAsync();
         }
     }
 }

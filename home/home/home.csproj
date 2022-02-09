@@ -12,10 +12,12 @@
 
   <ItemGroup>
     <None Remove="fonts\material\MaterialIcons-Regular.ttf" />
+    <None Remove="Project.db" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="fonts\material\MaterialIcons-Regular.ttf" />
+    <EmbeddedResource Include="Project.db" />
   </ItemGroup>
 
   <ItemGroup>
