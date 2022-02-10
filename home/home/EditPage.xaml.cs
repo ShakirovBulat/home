@@ -14,6 +14,10 @@ namespace home
     public partial class EditPage : ContentPage
     {
         readonly ProjectModel project;
+        public EditPage()
+        {
+            InitializeComponent();
+        }
         public EditPage(ProjectModel proj)
         {
             project = proj;

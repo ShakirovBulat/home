@@ -37,7 +37,7 @@ namespace home
         }
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new EditPage((project)));
+            await Navigation.PushAsync(new EditPage());
         }
         //DisplayAlert("Alert", "Tapped", "OK");
     }
