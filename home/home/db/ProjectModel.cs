@@ -5,9 +5,23 @@ using System.Text;
 
 namespace home.db
 {
-    [Table("Project1")]
+    [Table("Projectos")]
     public class ProjectModel
     {
+        public ProjectModel(string name, string description, string telephoneNumber1, string email, string address)
+        {
+            Name = name;
+            Description = description;
+            PhoneNum = telephoneNumber1;
+            Email = email;
+            Adress = address;
+        }
+
+        public ProjectModel()
+        {
+
+        }
+
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         [Unique]

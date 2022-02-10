@@ -11,13 +11,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="RegistrationPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="fonts\material\MaterialIcons-Regular.ttf" />
-    <None Remove="Project.db" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="fonts\material\MaterialIcons-Regular.ttf" />
-    <EmbeddedResource Include="Project.db" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +27,10 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="5.0.0.2337" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="RegistrationPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,6 +46,9 @@
     <EmbeddedResource Update="EditPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="RegPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="TabbedPage\Page1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -53,9 +62,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ProjectPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="RegistrationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

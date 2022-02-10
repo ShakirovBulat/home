@@ -16,7 +16,7 @@ namespace home
         }
         async void GoToRegPageButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RegistrationPage(), true);
+            await Navigation.PushAsync(new RegPage(), true);
         }
         async void OpenProjectsPageButtonClicked(object sender, EventArgs e)
         {

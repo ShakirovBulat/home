@@ -15,32 +15,30 @@ namespace home
         public ProjectPage()
         {
             InitializeComponent();
+            UpdateList();
         }
         // обработка нажатия элемента в списке
-        private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            ProjectModel selectedFriend = (ProjectModel)e.SelectedItem;
-            ProjectPage friendPage = new ProjectPage();
-            friendPage.BindingContext = selectedFriend;
-            await Navigation.PushAsync(friendPage);
-        }
-        // обработка нажатия кнопки добавления
-        private async void CreateFriend(object sender, EventArgs e)
-        {
-            ProjectModel friend = new ProjectModel();
-            ProjectPage friendPage = new ProjectPage();
-            friendPage.BindingContext = friend;
-            await Navigation.PushAsync(friendPage);
-        }
         async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             await App.GlobalNavigation.PushAsync(new AddAndEditPage(), true);
         }
 
 
-        async void OpenProject(object sender, EventArgs e)
+        private async void ProjectsLstview_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            await App.GlobalNavigation.PushAsync(new Project1(), true);
+            await Navigation.PushAsync(new Project1((ProjectModel)e.Item));
+        }
+
+        protected override void OnAppearing()
+        {
+            UpdateList();
+            base.OnAppearing();
+        }
+
+        public void UpdateList()
+        {
+            ProjectsLstview.ItemsSource = null;
+            ProjectsLstview.ItemsSource = App.Db.GetProjects();
         }
     }
 }

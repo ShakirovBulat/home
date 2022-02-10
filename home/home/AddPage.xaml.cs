@@ -17,14 +17,26 @@ namespace home
         {
             InitializeComponent();
         }
-        //private async void Save(object sender, EventArgs e)
-        //{
-        //    var project = (ProjectModel)BindingContext;
-        //    if (!String.IsNullOrEmpty(project.Name))
-        //    {
-        //        App.db.SaveItem(project);
-        //    }
-        //    await this.Navigation.PopAsync();
-        //}
+        private async void CancelBtn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+
+        private async void AddBtn_Clicked(object sender, EventArgs e)
+        {
+            List.Projects.Add(new ProjectModel(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, EmailTxt.Text, AddressTxt.Text));
+
+            try
+            {
+                App.db.SaveItem(new ProjectModel(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, EmailTxt.Text, AddressTxt.Text));
+            }
+            catch
+            {
+                await DisplayAlert("Error", "Загрузка в базу данных неуспешно", "Ok");
+            }
+
+            await Navigation.PopAsync();
+
+        }
     }
 }

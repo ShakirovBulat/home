@@ -23,11 +23,10 @@
             </Label>
         </StackLayout>
     </NavigationPage.TitleView>
-    <!--<Button Text="Добавить" Clicked="CreateFriend" />-->
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Button Clicked="OpenProject" Text="Проект 1" Margin="0,5,0,0" BorderColor="#000000" ></Button>
+                <!--<Button Clicked="OpenProject" Text="Проект 1" Margin="0,5,0,0" BorderColor="#000000" ></Button>
                     <Button Text="Проект 2" BorderColor="#000000" ></Button>
                     <Button Text="Проект 3" BorderColor="#000000" ></Button>
                     <Button Text="Проект 4" BorderColor="#000000" ></Button>
@@ -44,21 +43,22 @@
                     <Button Text="Проект 15" BorderColor="#000000" ></Button>
                     <Button Text="Проект 16" BorderColor="#000000" ></Button>
                     <Button Text="Проект 17" BorderColor="#000000" ></Button>
-                    <Button Text="Проект 18" BorderColor="#000000" ></Button>
-                    <!--<ListView x:Name="friendsList" ItemsSource="{Binding}" ItemSelected="OnItemSelected">
+                    <Button Text="Проект 18" BorderColor="#000000" ></Button>-->
+                <ListView
+            x:Name="ProjectsLstview"
+            Margin="0,0"
+            ItemTapped="ProjectsLstview_ItemTapped"
+            RowHeight="50"
+            SeparatorColor="Gray">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
-                                <ViewCell.View>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding Name}" FontSize="Medium" />
-                                    </StackLayout>
-                                </ViewCell.View>
-                            </ViewCell>
+                            <TextCell Text="{Binding Name}" TextColor="#000" />
+                            <!--<Label Text="{Binding Name}" TextColor="#000" FontSize="16"></Label>-->
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                </ListView>-->
-                
+                </ListView>
+
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

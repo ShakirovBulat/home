@@ -6,10 +6,11 @@
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" >
             <Label 
+                x:Name="NameProjLbl"
                 HorizontalOptions="CenterAndExpand" 
                 TextColor="White" 
-                Text="Проект 1" 
-                FontSize="Large" 
+                Text="" 
+                FontSize="21" 
                 Margin="0,0,45,0"/>
             <Label 
                 HorizontalOptions="End" 
@@ -24,9 +25,83 @@
             </Label>
         </StackLayout>
     </NavigationPage.TitleView>
-    <TabbedPage.Children>
-        <local:Page1 />
-        <local:Page2 />
-        <local:Page3 />
-    </TabbedPage.Children>
+    <ContentPage Title="О проекте">
+        <ScrollView Padding="0,0">
+            <StackLayout>
+                <Label
+                    Padding="20"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Описание:"
+                    TextColor="Black"
+                    TextTransform="Uppercase"
+                    VerticalOptions="Start" />
+                <Label
+                    x:Name="ProjectDescriptionLbl"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    HorizontalTextAlignment="Center"
+                    Text=""
+                    TextColor="Black"
+                    TextTransform="Uppercase" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage Title="Картинки">
+        <StackLayout Padding="20">
+            <StackLayout Orientation="Horizontal">
+                <Image
+                    x:Name="Img1"
+                    HeightRequest="150"
+                    Source="House.png"
+                    WidthRequest="180" />
+                <Image
+                    x:Name="Img2"
+                    HeightRequest="150"
+                    Source="House.png"
+                    WidthRequest="180" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image
+                    x:Name="Img3"
+                    HeightRequest="150"
+                    Source="House.png"
+                    WidthRequest="180" />
+                <Image
+                    x:Name="Img4"
+                    HeightRequest="150"
+                    Source="House.png"
+                    WidthRequest="180" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image
+                    x:Name="Img5"
+                    HeightRequest="150"
+                    Source="House.png"
+                    WidthRequest="180" />
+                <Image
+                    x:Name="Img6"
+                    HeightRequest="150"
+                    Source="House.png"
+                    WidthRequest="180" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Контакты">
+        <StackLayout Margin="50" Spacing="30">
+            <Frame BackgroundColor="LightGray">
+                <Label x:Name="TelephoneNumberLbl1" />
+            </Frame>
+            <Frame BackgroundColor="LightGray">
+                <Label x:Name="EmailLbl" />
+            </Frame>
+            <Frame BackgroundColor="LightGray">
+                <Label x:Name="AddressLbl" />
+            </Frame>
+        </StackLayout>
+    </ContentPage>
+
 </TabbedPage>

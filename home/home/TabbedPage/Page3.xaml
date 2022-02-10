@@ -5,19 +5,51 @@
              Title="Контакты"
              Visual="Material">
     <ContentPage.Content>
-        <StackLayout>
-            <Frame BorderColor="Black" Margin="30,20">
-                <Entry Placeholder="Телефон №1" IsEnabled="False" Margin="-15,-15"/>
-            </Frame>
-            <!--<Frame BorderColor="Black" Margin="30,20">
-                <Entry Placeholder="Телефон №2" IsEnabled="False" Margin="-15,-15"/>
-            </Frame>-->
-            <Frame BorderColor="Black" Margin="30,20">
-                <Entry Placeholder="E-mail" IsEnabled="False" Margin="-15,-15"/>
-            </Frame>
-            <Frame BorderColor="Black" Margin="30,20">
-                <Entry Placeholder="Адресс" IsEnabled="False" Margin="-15,-15"/>
-            </Frame>
+        <StackLayout Padding="50">
+            <StackLayout>
+                <Label Text="Телефон" />
+                <Frame BorderColor="#000">
+                    <Label
+                        x:Name="reger"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding project.TelephoneNumber1}"
+                        VerticalOptions="Start" />
+                </Frame>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Телефон" />
+                <Frame BorderColor="#000">
+                    <Label
+                        x:Name="TelephoneNumberLbl2"
+                        BackgroundColor="LightGray"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding project.TelephoneNumber2}"
+                        VerticalOptions="Start" />
+                </Frame>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Email" />
+                <Frame BorderColor="#000">
+                    <Label
+                        x:Name="EmailLbl"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="CenterAndExpand"
+                        Text=""
+                        VerticalOptions="Start" />
+                </Frame>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Адрес" />
+                <Frame BorderColor="#000">
+                    <Label
+                        x:Name="AddressLbl"
+                        BackgroundColor="#c9c9c9"
+                        HorizontalOptions="CenterAndExpand"
+                        Text=""
+                        VerticalOptions="Start" />
+                </Frame>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
