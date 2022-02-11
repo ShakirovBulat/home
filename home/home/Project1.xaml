@@ -2,7 +2,8 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:home;assembly=home"
-             x:Class="home.Project1">
+             x:Class="home.Project1"
+            Visual="Material">
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" >
             <Label 
@@ -93,13 +94,19 @@
     <ContentPage Title="Контакты">
         <StackLayout Margin="50" Spacing="30">
             <Frame BackgroundColor="LightGray">
-                <Label x:Name="TelephoneNumberLbl1" />
+                <Entry 
+                    Placeholder="Телефон" 
+                    x:Name="TelephoneNumberLbl1" />
             </Frame>
             <Frame BackgroundColor="LightGray">
-                <Label x:Name="EmailLbl" />
+                <Entry 
+                    Placeholder="E-mail"
+                    x:Name="EmailLbl" />
             </Frame>
             <Frame BackgroundColor="LightGray">
-                <Label x:Name="AddressLbl" />
+                <Entry 
+                    Placeholder="Адресс"
+                    x:Name="AddressLbl" />
             </Frame>
         </StackLayout>
     </ContentPage>
