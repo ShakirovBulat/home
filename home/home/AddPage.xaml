@@ -15,7 +15,8 @@
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout Margin="20,30" Spacing="30">
+        <ScrollView>
+            <StackLayout Margin="20,30" Spacing="30">
             <Entry
                 x:Name="ProjectNameTxt"
                 BackgroundColor="LightGray"
@@ -37,6 +38,34 @@
                 x:Name="AddressTxt"
                 BackgroundColor="LightGray"
                 Placeholder="Адрес" />
+            <StackLayout>
+                <StackLayout Margin="50,0">
+                    <StackLayout 
+                Orientation="Horizontal"
+                Margin="0,10" 
+                Spacing="10">
+                        <Button 
+                x:Name="galer" 
+                BackgroundColor="DeepSkyBlue" 
+                Text="ГАЛЕРЕЯ" 
+                HorizontalOptions="Start" 
+                CornerRadius="30" 
+                Clicked="GetPhotoAsync" 
+                Padding="30,10"/>
+                        <Button 
+                x:Name="camer" 
+                BackgroundColor="DeepSkyBlue" 
+                Text="КАМЕРА" 
+                HorizontalOptions="EndAndExpand" 
+                CornerRadius="30" 
+                Clicked="TakePhotoAsync" 
+                Padding="30,10"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout>
+                <Image x:Name="img" Margin="40"/>
+            </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Button
                     x:Name="CancelBtn"
@@ -57,7 +86,10 @@
                     Text="Добавить"
                     WidthRequest="150" />
             </StackLayout>
+            
         </StackLayout>
+        </ScrollView>
+
 
     </ContentPage.Content>
 </ContentPage>

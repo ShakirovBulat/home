@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using home.db;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using home.Models;
 namespace home
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
