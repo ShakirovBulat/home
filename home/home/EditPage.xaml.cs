@@ -20,8 +20,8 @@ namespace home
         public EditPage(ProjectModel project)
         {
             this.project = project;
-            FillFields();
             InitializeComponent();
+            FillFields();
         }
 
 
