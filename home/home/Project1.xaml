@@ -10,7 +10,7 @@
                 x:Name="NameProjLbl"
                 HorizontalOptions="CenterAndExpand" 
                 TextColor="White" 
-                Text="" 
+                Text="{x:Static local:Project1.NameTit}" 
                 FontSize="21" 
                 Margin="0,0,45,0"/>
             <Label 
@@ -51,62 +51,30 @@
     </ContentPage>
 
     <ContentPage Title="Картинки">
-        <StackLayout Padding="20">
-            <StackLayout Orientation="Horizontal">
-                <Image
-                    x:Name="Img1"
-                    HeightRequest="150"
-                    Source="House.png"
-                    WidthRequest="180" />
-                <Image
-                    x:Name="Img2"
-                    HeightRequest="150"
-                    Source="House.png"
-                    WidthRequest="180" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Image
-                    x:Name="Img3"
-                    HeightRequest="150"
-                    Source="House.png"
-                    WidthRequest="180" />
-                <Image
-                    x:Name="Img4"
-                    HeightRequest="150"
-                    Source="House.png"
-                    WidthRequest="180" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Image
-                    x:Name="Img5"
-                    HeightRequest="150"
-                    Source="House.png"
-                    WidthRequest="180" />
-                <Image
-                    x:Name="Img6"
-                    HeightRequest="150"
-                    Source="House.png"
-                    WidthRequest="180" />
-            </StackLayout>
-        </StackLayout>
+        <Image x:Name="img"
+                Margin="40"
+                Source="home.png" />
     </ContentPage>
 
     <ContentPage Title="Контакты">
-        <StackLayout Margin="50" Spacing="30">
-            <Frame BackgroundColor="LightGray">
+        <StackLayout Margin="30">
+            <Frame>
                 <Entry 
                     Placeholder="Телефон" 
-                    x:Name="TelephoneNumberLbl1" />
+                    x:Name="TelephoneNumberLbl1" 
+                    IsEnabled="False" />
             </Frame>
-            <Frame BackgroundColor="LightGray">
+            <Frame>
                 <Entry 
                     Placeholder="E-mail"
-                    x:Name="EmailLbl" />
+                    x:Name="EmailLbl" 
+                    IsEnabled="False" />
             </Frame>
-            <Frame BackgroundColor="LightGray">
+            <Frame>
                 <Entry 
                     Placeholder="Адресс"
-                    x:Name="AddressLbl" />
+                    x:Name="AddressLbl" 
+                    IsEnabled="False" />
             </Frame>
         </StackLayout>
     </ContentPage>

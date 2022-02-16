@@ -7,7 +7,7 @@ namespace home.db
 {
     public class CRUDOperation
     {
-        SQLiteConnection db;
+        readonly SQLiteConnection db;
         public CRUDOperation(string databasePath)
         {
             db = new SQLiteConnection(databasePath);
@@ -37,5 +37,6 @@ namespace home.db
                 return db.Insert(projectModel);
             }
         }
+
     }
 }

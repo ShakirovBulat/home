@@ -10,10 +10,10 @@ using Xamarin.Forms.Xaml;
 namespace home
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Project1 : TabbedPage
+    public partial class Project1
     {
         readonly ProjectModel project;
-        public static string Name;
+        public static string NameTit;
         protected override void OnAppearing()
         {
             FillInfo();
@@ -22,23 +22,22 @@ namespace home
         public Project1(ProjectModel project)
         {
             this.project = project;
-            Name = project.Name;
+            NameTit = project.Name;
             InitializeComponent();
             FillInfo();
         }
 
         public void FillInfo()
         {
-            NameProjLbl.Text = project.Name;
             ProjectDescriptionLbl.Text = project.Description;
             AddressLbl.Text = project.Adress;
             EmailLbl.Text = project.Email;
             TelephoneNumberLbl1.Text = project.PhoneNum;
+            img.Source = project.Image;
         }
-        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new EditPage());
+            Navigation.PushAsync(new EditPage(project));
         }
-        //DisplayAlert("Alert", "Tapped", "OK");
     }
 }

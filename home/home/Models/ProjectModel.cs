@@ -8,13 +8,14 @@ namespace home.db
     [Table("Projectos")]
     public class ProjectModel
     {
-        public ProjectModel(string name, string description, string telephoneNumber1, string email, string address)
+        public ProjectModel(string name, string description, string telephoneNumber1, string email, string address, string image)
         {
             Name = name;
             Description = description;
             PhoneNum = telephoneNumber1;
             Email = email;
             Adress = address;
+            Image = image;
         }
 
         public ProjectModel()
@@ -30,5 +31,6 @@ namespace home.db
         public string PhoneNum { get; set; }
         public string Email { get; set; }
         public string Adress { get; set; }
+        public string Image { get; set; }
     }
 }

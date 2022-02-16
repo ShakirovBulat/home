@@ -4,23 +4,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using home.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
+using System.IO;
+using System.Diagnostics;
 
 namespace home
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditPage : ContentPage
     {
+        string impath;
         readonly ProjectModel project;
-        public EditPage()
+        public EditPage(ProjectModel project)
         {
-            InitializeComponent();
-        }
-        public EditPage(ProjectModel proj)
-        {
-            project = proj;
+            this.project = project;
             FillFields();
             InitializeComponent();
         }
@@ -28,11 +27,12 @@ namespace home
 
         public void FillFields()
         {
-            ProjName.Text = project.Name;
-            DescriptionProj.Text = project.Description;
-            PhonNumbProj.Text = project.PhoneNum;
-            EmailProj.Text = project.Email;
-            AdressProj.Text = project.Adress;
+            ProjectNameTxt.Text = project.Name;
+            ProjectDescriptionTxt.Text = project.Description;
+            TelNumber1Txt.Text = project.PhoneNum;
+            EmailTxt.Text = project.Email;
+            AddressTxt.Text = project.Adress;
+            img.Source = project.Image;
         }
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
@@ -50,7 +50,6 @@ namespace home
                 await Navigation.PopAsync();
             }
         }
-        //DisplayAlert("Alert", "Tapped", "OK");
         private async void CancelBtn_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
@@ -61,11 +60,12 @@ namespace home
 
             if (result)
             {
-                project.Name = ProjName.Text;
-                project.Description = DescriptionProj.Text;
-                project.PhoneNum = PhonNumbProj.Text;
-                project.Adress = AdressProj.Text;
-                project.Email = EmailProj.Text;
+                project.Name = ProjectNameTxt.Text;
+                project.Description = ProjectDescriptionTxt.Text;
+                project.PhoneNum = TelNumber1Txt.Text;
+                project.Email = EmailTxt.Text;
+                project.Adress = AddressTxt.Text;
+                project.Image = impath;
 
                 try
                 {
@@ -77,6 +77,42 @@ namespace home
                 }
 
                 await Navigation.PopAsync();
+            }
+        }
+        async void GetPhotoAsync(object sender, EventArgs e)
+        {
+            try
+            {
+                var photo = await MediaPicker.PickPhotoAsync();
+                impath = photo.FullPath;
+                img.Source = impath;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
+            }
+        }
+
+        async void TakePhotoAsync(object sender, EventArgs e)
+        {
+            try
+            {
+                var photo = await MediaPicker.CapturePhotoAsync(new MediaPickerOptions
+                {
+                    Title = $"xamarin.{DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss")}.png"
+                });
+                var newFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), photo.FileName);
+                using (var stream = await photo.OpenReadAsync())
+                using (var newStream = File.OpenWrite(newFile))
+                    await stream.CopyToAsync(newStream);
+
+                Debug.WriteLine($"Путь фото {photo.FullPath}");
+                impath = photo.FullPath;
+                img.Source = impath;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
             }
         }
     }

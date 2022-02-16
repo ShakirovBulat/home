@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using home.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
@@ -24,16 +23,12 @@ namespace home
             {
                 var photo = await MediaPicker.PickPhotoAsync();
                 impath = photo.FullPath;
+                img.Source = impath;
             }
             catch (Exception ex)
             {
                 await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
             }
-        }
-        
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
         }
 
         async void TakePhotoAsync(object sender, EventArgs e)
@@ -51,6 +46,7 @@ namespace home
 
                 Debug.WriteLine($"Путь фото {photo.FullPath}");
                 impath = photo.FullPath;
+                img.Source = impath;
             }
             catch (Exception ex)
             {
@@ -66,20 +62,19 @@ namespace home
             await Navigation.PopAsync();
         }
 
-        private async void AddBtn_Clicked(object sender, EventArgs e)
+        private void AddBtn_Clicked(object sender, EventArgs e)
         {
-            List.Projects.Add(new ProjectModel(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, EmailTxt.Text, AddressTxt.Text));
-
             try
             {
-                App.db.SaveItem(new ProjectModel(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, EmailTxt.Text, AddressTxt.Text));
+                App.db.SaveItem(new ProjectModel(ProjectNameTxt.Text, ProjectDescriptionTxt.Text, TelNumber1Txt.Text, EmailTxt.Text, AddressTxt.Text, impath));
+                DisplayAlert("", "Проект успешно добавлен", "Ok");
             }
             catch
             {
-                await DisplayAlert("Error", "Загрузка в базу данных неуспешно", "Ok");
+                DisplayAlert("", "Не удалось добавить проект", "Ok");
             }
 
-            await Navigation.PopAsync();
+            Navigation.PopAsync();
 
         }
     }
